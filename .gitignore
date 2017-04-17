@@ -1,0 +1,11 @@
+# ignore coding challenge
+coding_challenge.md
+
+# ignore any log files
+*.log
+
+# ignore system generated DS_Store
+*.DS_Store
+
+# ignore pizza_api.md
+pizza_api.md
