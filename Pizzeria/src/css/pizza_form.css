@@ -1,0 +1,94 @@
+.pizza_form {
+    font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+/* Pizzeria input */
+.pizza_form input {
+    text-align: center;
+}
+
+.pizza_form ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;   
+}
+
+.pizza_form li {
+    display: block;
+    padding: 9px;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    background-color: white;
+}
+
+.pizza_form li:last-child {
+    background-color: transparent;
+    padding: 0px;
+}
+
+.pizza_form li > span {
+    background: black;
+    display: block;
+    padding: 3px;
+    margin: 0 -9px -9px -9px;
+    text-align: center;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+}
+
+.pizza_form textarea {
+    resize:none;
+}
+
+.pizza_form input[type="text"],
+.pizza_form input[type="search"],
+.pizza_form textarea,
+.pizza_form select 
+{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    width: 100%;
+    display: block;
+    outline: none;
+    border: none;
+    height: 25px;
+    line-height: 25px;
+    font-size: 16px;
+    padding: 0;
+    font-family: Georgia, "Times New Roman", Times, serif;
+}
+/* --- */
+
+/* Pizzeria button */
+.pizza_form a {
+    -moz-box-shadow: 0px 3px 8px -1px #8a2a21;
+    -webkit-box-shadow: 0px 3px 8px -1px #8a2a21;
+    box-shadow: 0px 3px 8px -1px #8a2a21;
+    background-color: #c62d1f;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    border: 1px solid #d02718;
+    display: block;
+    cursor: pointer;
+    color: white;
+    font-family: Georgia;
+    font-size: 20px;
+    padding: 16px;
+    text-decoration: none;
+    text-shadow: 0px 2px 0px #810e05;
+}
+
+.pizza_form a:hover {
+    background-color: #f24437;
+}
+
+.pizza_form a:active {
+    position: relative;
+    top: 1px;
+}
+/* --- */
