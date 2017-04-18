@@ -5,22 +5,33 @@
 <title>Pizzeria</title>
 <link rel="stylesheet" type="text/css" href="../css/main.css">
 <link rel="stylesheet" type="text/css" href="../css/pizza_form.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script type="text/javascript" src="../js/pizza_finder.js"></script>
 </head>
 
 <body>
-	<h1 >PIZZERIA </h1>
 	<div class='flex-containter'>
 		<div class='col'>
+			<h1 >PIZZERIA </h1>
 			<div class='flex-item'>
-				<form class="pizza_form">
+				<form class='pizza_form'>
 					<ul>
 						<li>
-							<input type="text">
+							<input type="text" id="city"/>
 							<span>Enter a city</span>
 						</li>
 					</ul>
-					<a href="#">Find me pizza</a>
+					<a id="find">Find Me Pizza</a>
 				</form>
+			</div>
+			<div class='flex-item'>
+				<section class='form-validation'>
+					<h3 id="validation"></h3>
+				</section>
+				<section class='list-style'>
+					<ul id="pizza-list">
+					</ul>
+				</section>
 			</div>
 		</div>
 	</div>

@@ -1,5 +1,6 @@
-html { 
-    background: url("../../resources/img/Athena_pizza.jpg") no-repeat center center fixed; 
+html {
+    /* pizza photo credit to www.athenaspizzaamherst.com */
+    background: url("../../resources/img/Athena_pizza.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -13,13 +14,13 @@ body {
 h1 {
     color: white;
     font-family: 'Rouge Script', cursive;
-    font-size: 320%; 
-    font-weight: normal; 
+    font-size: 320%;
+    font-weight: normal;
+    text-align: center;
+    text-shadow: 1px 1px 2px #082b34;
     line-height: 18px;
     margin-top: 50px;
     margin-right: 4px;
-    text-align: center; 
-    text-shadow: 1px 1px 2px #082b34; 
 }
 
 #background-img {

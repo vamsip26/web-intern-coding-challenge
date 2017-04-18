@@ -1,7 +1,17 @@
 .pizza_form {
     font-family: Georgia, "Times New Roman", Times, serif;
 }
-
+.form-validation {
+    background-color: white;
+    border-radius: 3px;
+}
+.loading {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    padding: 3px;
+    color: black;
+}
 /* Pizzeria input */
 .pizza_form input {
     text-align: center;
@@ -10,13 +20,13 @@
 .pizza_form ul {
     list-style: none;
     padding: 0;
-    margin: 0;   
+    margin: 0;
 }
 
 .pizza_form li {
     display: block;
     padding: 9px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     border-radius: 3px;
     background-color: white;
 }
@@ -30,7 +40,7 @@
     background: black;
     display: block;
     padding: 3px;
-    margin: 0 -9px -9px -9px;
+    margin: 0;
     text-align: center;
     border-bottom-right-radius: 3px;
     border-bottom-left-radius: 3px;
@@ -46,7 +56,7 @@
 .pizza_form input[type="text"],
 .pizza_form input[type="search"],
 .pizza_form textarea,
-.pizza_form select 
+.pizza_form select
 {
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -54,6 +64,8 @@
     width: 100%;
     display: block;
     outline: none;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
     border: none;
     height: 25px;
     line-height: 25px;
@@ -90,5 +102,26 @@
 .pizza_form a:active {
     position: relative;
     top: 1px;
+}
+/* --- */
+
+/* Pizzeria List */
+#pizza-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 40px;
+    display: block;
+    font-size: 14px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    color: black;
+    border-width: 1px;
+    border-color: gray;
+    border-radius: 3px;
+    background-color: white;
+}
+
+.list-style li {
+    border-width: 1px;
+    border-color: gray;
 }
 /* --- */
