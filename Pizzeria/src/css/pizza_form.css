@@ -8,7 +8,7 @@
 .loading {
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 10px;
+    font-size: 12px;
     padding: 3px;
     color: black;
 }
@@ -108,7 +108,7 @@
 /* Pizzeria List */
 #pizza-list {
     list-style: none;
-    padding: 0;
+    padding: 0px;
     margin-bottom: 40px;
     display: block;
     font-size: 14px;
@@ -120,8 +120,40 @@
     background-color: white;
 }
 
-.list-style li {
-    border-width: 1px;
-    border-color: gray;
+#pizza-list p {
+    text-align: left;
+}
+
+#pizza-list li:last-child {
+    padding: 10px;
+    display: block;
+    overflow: auto;
+    list-style-position: inside;
+    border: 1px solid #eee;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+#pizza-list li:first-child {
+    padding: 10px;
+    display: block;
+    overflow: auto;
+    list-style-position: inside;
+    border: 1px solid #eee;
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+}
+
+#pizza-list li {
+    padding: 10px;
+    display: block;
+    overflow: auto;
+    list-style-position: inside;
+    border: 1px solid #eee;
+}
+
+#pizza-list li:hover {
+    background: #eee;
+    cursor: pointer;
 }
 /* end pizzeria list */

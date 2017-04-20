@@ -1,13 +1,21 @@
 /* jQuery and JS for Pizza API */
 $(document).ready(function() {
-
+	/* placeholder focusing */
+	$('#city').data('ph', $('#city').attr('placeholder'));
+	$('#city').focusin(function () {
+        $(this).attr('placeholder', '');
+    });
+    $('#city').focusout(function () {
+        $(this).attr('placeholder', $(this).data('ph'));
+    });
 	/* check whether 'Find Me Pizza' button clicked or enter key pressed */
 	$('#find').click(function() {
 		findPizza();
 		$(this).closest('form').find("input[type=text], textarea").val("");
 	});
-	$('#city').keyup(function(event) {
+	$('#city').keydown(function(event) {
 		if(event.keyCode == 13){
+			event.preventDefault();
 			findPizza();
 			$(this).closest('form').find("input[type=text], textarea").val("");
 		}
@@ -20,6 +28,7 @@ $(document).ready(function() {
 	 * (Fourth) make pizzeria list
 	 */
 	var findPizza = function() {
+		$('#pizza-list').empty();
 		var location = $('#city').val();
 		/* (First) */
 		if (!location.trim()) {
@@ -35,11 +44,12 @@ $(document).ready(function() {
 					/* (Fourth) */
 					var total = "" + json.length;
 					var list = $('#pizza-list');
-					$('#list').html("<h3 class='loading'>" + total + " pizzeria near " + location + "</h3>");
+					$('#list').html("<h3 class='loading'>" + total + " Pizzeria Near " + location + "</h3>");
 					$.each(json, function(index, object) {
 						var restaurantName = json[index].properties.pizzeria;
 						var restaurantAddress = json[index].properties.address;
-						var item = "<li>" + restaurantName + " " + restaurantAddress + "</li>";
+						var restaurantUrl = json[index].properties.website;
+						var item = "<li><p>Name: " + restaurantName + "<br> Address: " + restaurantAddress + "</p></li>";
 						list.append(item);
 					});
 				}

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <meta charset="UTF-8"
+
 <head>
 <title>Pizzeria</title>
 <link rel="stylesheet" type="text/css" href="../css/main.css">
@@ -17,18 +18,18 @@
 				<form class='pizza_form'>
 					<ul>
 						<li>
-							<input type="text" id="city"/>
+							<input type="text" placeholder="Enter a city name here" id="city"/>
 							<span>Enter a city</span>
 						</li>
 					</ul>
 					<a id="find">Find Me Pizza</a>
+					<section class='form-validation'>
+						<h3 id="list"></h3>
+					</section>
 				</form>
 			</div>
 			<div class='flex-item'>
-				<section class='form-validation'>
-					<h3 id="validation"></h3>
-				</section>
-				<section class='list-style'>
+				<section>
 					<ul id="pizza-list">
 					</ul>
 				</section>
