@@ -12,7 +12,7 @@
     padding: 3px;
     color: black;
 }
-/* Pizzeria input */
+/* Pizzeria Input */
 .pizza_form input {
     text-align: center;
 }
@@ -73,9 +73,9 @@
     padding: 0;
     font-family: Georgia, "Times New Roman", Times, serif;
 }
-/* --- */
+/* end pizzeria input */
 
-/* Pizzeria button */
+/* Pizzeria Button */
 .pizza_form a {
     -moz-box-shadow: 0px 3px 8px -1px #8a2a21;
     -webkit-box-shadow: 0px 3px 8px -1px #8a2a21;
@@ -103,7 +103,7 @@
     position: relative;
     top: 1px;
 }
-/* --- */
+/* end pizzeria button */
 
 /* Pizzeria List */
 #pizza-list {
@@ -124,4 +124,4 @@
     border-width: 1px;
     border-color: gray;
 }
-/* --- */
+/* end pizzeria list */

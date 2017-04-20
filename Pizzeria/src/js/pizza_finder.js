@@ -1,5 +1,7 @@
 /* jQuery and JS for Pizza API */
 $(document).ready(function() {
+
+	/* check whether 'Find Me Pizza' button clicked or enter key pressed */
 	$('#find').click(function() {
 		findPizza();
 		$(this).closest('form').find("input[type=text], textarea").val("");
@@ -10,21 +12,30 @@ $(document).ready(function() {
 			$(this).closest('form').find("input[type=text], textarea").val("");
 		}
 	});
+
+	/* Query Pizza API for pizzeria's
+	 * (First) validate form information
+	 * (Second) get JSON objects
+	 * (Third) validate JSON data
+	 * (Fourth) make pizzeria list
+	 */
 	var findPizza = function() {
 		var location = $('#city').val();
-		console.log('location is: ', location);
+		/* (First) */
 		if (!location.trim()) {
-			$('#validation').html("<h3 class='loading'>Please enter a city name</h3>");
+			$('#list').html("<h3 class='loading'>Please enter a city name</h3>");
 		} else {
-			$('#validation').html("<h3 class='loading'>Loading pizzeria's");
+			/* (Second) */
+			$('#list').html("<h3 class='loading'>Loading pizzeria's");
 			$.getJSON("http://shipt-pizza-api.herokuapp.com/api/v1/properties/search?city=" + location, function(json) {
+				/* (Third) */
 				if (json.length == 0) {
-					$('#validation').html("<h3 class='loading'>Nothing found for " + location + "</h3>");
+					$('#list').html("<h3 class='loading'>Nothing found for " + location + "</h3>");
 				} else {
-					console.log(json);
+					/* (Fourth) */
 					var total = "" + json.length;
 					var list = $('#pizza-list');
-					$('#validation').html("<h3 class='loading'>" + total + " pizzeria near " + location + "</h3>");
+					$('#list').html("<h3 class='loading'>" + total + " pizzeria near " + location + "</h3>");
 					$.each(json, function(index, object) {
 						var restaurantName = json[index].properties.pizzeria;
 						var restaurantAddress = json[index].properties.address;
