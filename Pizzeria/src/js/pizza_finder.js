@@ -24,7 +24,7 @@ $(document).ready(function() {
 	});
 
 	/* Clickable list items direct to pizzeria website */
-	$('#pizza-list').on("click", "li", function() {
+	$('#pizzeria-list').on("click", "li", function() {
 		var listItem = $(this).index().toString();
 		var url = $.session.get(listItem).toString();
 		window.location.href = url;
@@ -38,7 +38,7 @@ $(document).ready(function() {
 	 */
 	var findPizza = function() {
 		$.session.clear();
-		$('#pizza-list').empty();
+		$('#pizzeria-list').empty();
 		var location = $('#city').val().toString();
 		/* (First) */
 		if (!location.trim()) {
@@ -53,7 +53,7 @@ $(document).ready(function() {
 				} else {
 					/* (Fourth) */
 					var total = json.length;
-					var list = $('#pizza-list');
+					var list = $('#pizzeria-list');
 					$('#list').html("<h3 class='loading'>" + total + " Pizzeria's Near " + location + "<br>"
 						+ "Click a Pizzeria for more information</h3>");
 					$.each(json, function(index, object) {
