@@ -4,19 +4,17 @@ Completed by Brendan Baalke
 
 Tools/Libraries/Plugins
 ---------------
-* 'free' MAMP for a local server environment
+* MAMP for a local server environment
     - Download MAMP [here](https://www.mamp.info/en/downloads/) and navigate to where MAMP has installed. Drag this project folder into the folder inside MAMP called "htdocs". Then start MAMP hit "start servers" and click on the WebStart page button. Click on "My Website" once the MAMP homepage has loaded. Then navigate to the directory containing index.html.
 
-* 'free' Sublime Text 2 editor
+* Sublime Text 2 editor
 	- Download Sublime Text 2 [here](https://sublimetext.com/2).
 
 * jQuery Library
-	- How to include jQuery:
-	```javascript
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-	```
+	- jQuery provides session storage, and simple to read web scripting. As well as quick website functionality.
 
 * Flexbox
+	- Flexbox allowed me to align my main content horizontally and vertically very easily. If I want to add further content to my site the ".flex-container" and ".flex-item" classes will be useful.
 
 * jQuerySession Plugin
 	- I use this public jQuery session plugin so I can make use of session storage for each item in my pizza list.
@@ -25,20 +23,19 @@ My Naming Conventions
 ---------------------
 * File names have underscores
 * Class's and id's in CSS have hyphens
-* variables and functions in JS have camel case
+* Variables and functions in JS have camel case
 
 Problem
 -------
----
 * ***Best Pizza Around Town***
 	- **Description:**
 		- Create a user friendly web service for finding the latest and top rated pizza restaurants around the world!
 		Design UX/UI that is simple enough to handle/understand for users of all ages.
 
     - **Requirements:**
-		- Allow users to find a pizzeria either by city name or by specific pizzeria name.
-		- List pizzeria's elegantly (possibly Google Maps API integration).
-		- Allow users to click on links in the list to gain additional information or start navigation to pizzeria.
+		- Allow users to find a pizzeria either by city name.
+		- List pizzeria's elegantly.
+		- Allow users to click on list items to gain additional information from restaurants website.
 
     - **Questions to think about:**
 		- What are some use cases?
@@ -62,17 +59,22 @@ Problem
 
     - **Testing:**
     	```javascript
-    	var location = $('#city').val();
+		$.session.clear();
+		$('#pizza-list').empty();
+		var location = $('#city').val().toString();
+		/* (First) */
 		if (!location.trim()) {
 			$('#list').html("<h3 class='loading'>Please enter a city name</h3>");
 		} else {
+			/* (Second) */
 			$('#list').html("<h3 class='loading'>Loading pizzeria's");
 			$.getJSON("http://shipt-pizza-api.herokuapp.com/api/v1/properties/search?city=" + location, function(json) {
+				/* (Third) */
 				if (json.length == 0) {
 					$('#list').html("<h3 class='loading'>Nothing found for " + location + "</h3>");
     	```
-    	- I perform form validation as well as some API validation within my jQuery code. Outside of programming I have tested Pizzeria on Chrome, Mozilla Firefox, Safari/Safari mobile, and Internet Explorer. In addition to testing I have had several of my friends and I try to break my web service.
-    		- With additional time I would try to test and find answers to the questions above in the 'Questions to think about' section. I would also perform tests for other scenarios such as 'what happens when a user switches from wifi to their mobile service provider'? Does the service freeze, crash, glitch out? I'd also spend time working on an automated test to ping the Pizza API Server to make sure it is online before trying to get JSON data from it. I would also further check for more possibilities of code injection.
+    	- I perform form validation as well as some API validation within my jQuery code. Checked that all file permissions are safe. Created a simple Content Security Policy header to avoid code injection from untrusted sources. Outside of programming I have tested Pizzeria on Chrome, Mozilla Firefox, Safari/Safari mobile, and Internet Explorer.
+    		- With additional time I would try to test and find answers to the questions above in the 'Questions to think about' section. I would also perform tests for other scenarios such as 'what happens when a user switches from wifi to their mobile service provider'? Does the service freeze, crash, glitch out? I'd also spend time working on an automated test to ping the Pizza API Server to make sure it is online before trying to get JSON data from it. I would also further check for more possibilities of code injection (XSS attacks...etc).
 
 
 Project Conclusion
