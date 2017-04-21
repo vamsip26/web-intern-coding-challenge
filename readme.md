@@ -1,8 +1,8 @@
-Intern Coding Challenge
+Intern Coding Challenge (Best Pizza Around Town)
 =======================
 Completed by Brendan Baalke
 
-Tools/Libraries
+Tools/Libraries/Plugins
 ---------------
 * 'free' MAMP for a local server environment
     - Download MAMP [here](https://www.mamp.info/en/downloads/) and navigate to where MAMP has installed. Drag this project folder into the folder inside MAMP called "htdocs". Then start MAMP hit "start servers" and click on the WebStart page button. Click on "My Website" once the MAMP homepage has loaded. Then navigate to the directory containing index.html.
@@ -18,16 +18,19 @@ Tools/Libraries
 
 * Flexbox
 
+* jQuerySession Plugin
+	- I use this public jQuery session plugin so I can make use of session storage for each item in my pizza list.
+
 My Naming Conventions
 ---------------------
 * File names have underscores
-* class's and id's in CSS have hyphens
+* Class's and id's in CSS have hyphens
 * variables and functions in JS have camel case
 
 Problem
 -------
 ---
-* ***Pizzeria***
+* ***Best Pizza Around Town***
 	- **Description:**
 		- Create a user friendly web service for finding the latest and top rated pizza restaurants around the world!
 		Design UX/UI that is simple enough to handle/understand for users of all ages.
@@ -54,7 +57,7 @@ Problem
 			- With additional time to work on the design I would definitely look for a higher resolution background image with similar appeal. I would also like to gather additional "hands on" user feedback, and test the design on more smart phones, browsers and different screen resolutions.
 
     - **Functionality:**
-		- I decided to use jQuery for the similar CSS syntax, and API data simplicity. Since jQuery also makes working with JSON data so easy this improved my productivity. JQuery will make this site easier to change if needed in the future, and also easy to understand for new web developers. I used Flexbox for flow and arranging my design. Flexbox offers greater design control with less code and I find it very intuitive.
+		- I decided to use jQuery for the similar CSS syntax, and API data simplicity. Since jQuery also makes working with JSON data so easy this improved my productivity. JQuery will make this site easier to change if needed in the future, and also easy to understand for new web developers. I used Flexbox for flow and arranging my design. Flexbox offers greater design control with less code and I find it very intuitive. I use the jQuerySession plugin so that I only store data for a single web session, and I make sure to clear the data with every search result.
 			- With additional time I would test my site on Opera, Android, and Blackberry browsers to make sure my Flex styling and JQuery are working properly.
 
     - **Testing:**
@@ -69,21 +72,12 @@ Problem
 					$('#list').html("<h3 class='loading'>Nothing found for " + location + "</h3>");
     	```
     	- I perform form validation as well as some API validation within my jQuery code. Outside of programming I have tested Pizzeria on Chrome, Mozilla Firefox, Safari/Safari mobile, and Internet Explorer. In addition to testing I have had several of my friends and I try to break my web service.
-    		- With additional time I would try to test and find answers to the questions above in the 'Questions to think about' section. I would also perform tests for other scenarios such as 'what happens when a user switches from wifi to their mobile service provider'? Does the service freeze, crash, glitch out? I'd also spend time working on an automated test to ping the Pizza API Server to make sure it is online before trying to get JSON data from it.
+    		- With additional time I would try to test and find answers to the questions above in the 'Questions to think about' section. I would also perform tests for other scenarios such as 'what happens when a user switches from wifi to their mobile service provider'? Does the service freeze, crash, glitch out? I'd also spend time working on an automated test to ping the Pizza API Server to make sure it is online before trying to get JSON data from it. I would also further check for more possibilities of code injection.
 
----
-*   ***GitFollowers***
-	- **Description**
-	- **Requirements**
-	- **Questions to think about**
-	- **Design**
-	- **Functionality**
-	- **Testing**
----
 
 Project Conclusion
 ------------------
-* "Create a service that shows a list of the best pizza locations around the world." I thought about this line for a while trying to determine exactly how to interpret and implement this into my Pizzeria service. I decided that if someone actually used my service it wouldn't make sense to just list "all" the pizza restaraunts around the world. The purpose of the service is to let people know what pizza restaraunts are near them, and help them get the best pizza as quick as possible. That is why I decided to just use a city name as my searching parameter. I thought about using the pizzeria name as well, but if someone searched for 'flying squirrel' they could get restaraunts all over the country and that doesn't seem useful in most scenarios. Since I only use the city name I didn't need to use the "INDEX" and "SHOW" endpoints.
+* "Create a service that shows a list of the best pizza locations around the world." I thought about this line for a while trying to determine exactly how to interpret and implement this into my Pizzeria service. I decided that if someone actually used my service it wouldn't make sense to just list "all" the pizza restaurants around the world. The purpose of the service is to let people know what pizza restaurants are near them, and help them get the best pizza as quick as possible. That is why I decided to just use a city name as my searching parameter. Plus the title of the challenge is "Best Pizza Around Town." Since I only use the city name I didn't see a need to use the "INDEX" and "SHOW" endpoints from the pizza API. A feature I would like to add later would be to have it save cookies locally for the list of pizzeria's. That way if a user clicks on one of the list items and goes to the website, but then hits the back button they don't have to put the city name back in to get their list back. I would also like to add some JavaScript or jQuery to check for what device the user is currently viewing the site with. Then scale the design for that particular devices resolution as this would provide a better user experience.
 
 Resume/Profiles
 ---------------

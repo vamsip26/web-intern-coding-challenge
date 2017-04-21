@@ -21,6 +21,13 @@ $(document).ready(function() {
 		}
 	});
 
+	/* Clickable list items */
+	$('#pizza-list').on("click", "li", function() {
+		var listItem = "" + $(this).index();
+		var url = $.session.get(listItem);
+		window.location.href = "" + url;
+	});
+
 	/* Query Pizza API for pizzeria's
 	 * (First) validate form information
 	 * (Second) get JSON objects
@@ -28,6 +35,7 @@ $(document).ready(function() {
 	 * (Fourth) make pizzeria list
 	 */
 	var findPizza = function() {
+		$.session.clear();
 		$('#pizza-list').empty();
 		var location = $('#city').val();
 		/* (First) */
@@ -44,11 +52,12 @@ $(document).ready(function() {
 					/* (Fourth) */
 					var total = "" + json.length;
 					var list = $('#pizza-list');
-					$('#list').html("<h3 class='loading'>" + total + " Pizzeria Near " + location + "</h3>");
+					$('#list').html("<h3 class='loading'>" + total + " Pizzeria's Near " + location + "<br>"
+						+ "Click a Pizzeria for more information</h3>");
 					$.each(json, function(index, object) {
 						var restaurantName = json[index].properties.pizzeria;
 						var restaurantAddress = json[index].properties.address;
-						var restaurantUrl = json[index].properties.website;
+						$.session.set(index, json[index].properties.website);
 						var item = "<li><p>Name: " + restaurantName + "<br> Address: " + restaurantAddress + "</p></li>";
 						list.append(item);
 					});
