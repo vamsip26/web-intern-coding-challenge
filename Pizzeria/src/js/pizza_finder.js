@@ -4,11 +4,11 @@ $(document).ready(function() {
 	/* placeholder focusing */
 	$('#city').data('ph', $('#city').attr('placeholder'));
 	$('#city').focusin(function () {
-        $(this).attr('placeholder', '');
-    });
-    $('#city').focusout(function () {
-        $(this).attr('placeholder', $(this).data('ph'));
-    });
+    $(this).attr('placeholder', "");
+  });
+  $('#city').focusout(function () {
+    $(this).attr('placeholder', $(this).data('ph'));
+  });
 
 	/* check whether 'Find Me Pizza' button clicked or enter key pressed */
 	$('#find').click(function() {
@@ -16,21 +16,52 @@ $(document).ready(function() {
 		$(this).closest('form').find("input[type=text], textarea").val("");
 	});
 	$('#city').keydown(function(event) {
-		if(event.keyCode == 13){
+		if(event.keyCode == 13) {
 			event.preventDefault();
 			findPizza();
 			$(this).closest('form').find("input[type=text], textarea").val("");
 		}
 	});
 
-	/* Clickable list items direct to pizzeria website */
-	$('#pizzeria-list').on("click", "li", function() {
+	/* allow only alphanumerics for city input */
+  $("#city").keypress(function(event) {
+      var inputValue = event.which;
+      if(!(inputValue >= 65 && inputValue <= 90) && !(inputValue >= 97 && inputValue <= 122)
+      	&& (inputValue != 32 && inputValue != 0)) {
+          event.preventDefault();
+      }
+  });
+
+	/* capitalize first letter of city name when displayed */
+	/* function allows chaining */
+	String.prototype.capitalizeFL = function() {
+		var cityNameSplit = this.split(" ");
+		var fullCityName = "";
+		var index;
+		var numberOfSpaces = cityNameSplit.length - 1;
+
+		for (index = 0; index < cityNameSplit.length; index++) {
+			fullCityName += cityNameSplit[index].charAt(0).toUpperCase() + cityNameSplit[index].slice(1).toLowerCase();
+			if (index != numberOfSpaces) {
+				fullCityName += " ";
+			}
+		}
+    return fullCityName;
+	}
+
+	/* clickable list items direct to pizzeria website */
+	/* checks for tab creation via cmd/ctrl */
+	$('#pizzeria-list').on("click", "li", function(e) {
 		var listItem = $(this).index().toString();
 		var url = $.session.get(listItem).toString();
-		window.location.href = url;
+		if (e.metaKey) {
+			window.open(url, "_blank");
+		} else {
+			window.location.href = url;
+		}
 	});
 
-	/* Query Pizza API for pizzeria's
+	/* query pizza API for pizzeria's
 	 * (First) validate form information
 	 * (Second) get JSON objects
 	 * (Third) validate JSON data
@@ -54,8 +85,8 @@ $(document).ready(function() {
 					/* (Fourth) */
 					var total = json.length;
 					var list = $('#pizzeria-list');
-					$('#list').html("<h3 class='loading'>" + total + " Pizzeria's Near " + location + "<br>"
-						+ "Click a Pizzeria for more information</h3>");
+					$('#list').html("<h3 class='loading'>" + total + " pizzeria's near " + location.capitalizeFL() + "<br>"
+						+ "Click a pizzeria for more information</h3>");
 					$.each(json, function(index, object) {
 						var restaurantName = json[index].properties.pizzeria;
 						var restaurantAddress = json[index].properties.address;

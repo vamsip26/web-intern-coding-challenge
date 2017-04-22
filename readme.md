@@ -33,7 +33,7 @@ Problem
 		Design UX/UI that is simple enough to handle/understand for users of all ages.
 
     - **Requirements:**
-		- Allow users to find a pizzeria either by city name.
+		- Allow users to find a pizzeria by city name.
 		- List pizzeria's elegantly.
 		- Allow users to click on list items to gain additional information from restaurants website.
 
@@ -76,7 +76,7 @@ Problem
 
 Project Conclusion
 ------------------
-* "Create a service that shows a list of the best pizza locations around the world." I thought about this line for a while trying to determine exactly how to interpret and implement this into my Pizzeria service. I decided that if someone actually used my service it wouldn't make sense to just list "all" the pizza restaurants around the world. The purpose of the service is to let people know what pizza restaurants are near them, and help them get the best pizza as quick as possible. That is why I decided to just use a city name as my searching parameter. Plus the title of the challenge is "Best Pizza Around Town." Since I only use the city name I didn't see a need to use the "INDEX" and "SHOW" endpoints from the pizza API. A feature I would like to add later would be to have it save cookies locally for the list of pizzeria's. That way if a user clicks on one of the list items and goes to the website, but then hits the back button they don't have to put the city name back in to get their list back.
+* "Create a service that shows a list of the best pizza locations around the world." I thought about this line for a while trying to determine exactly how to interpret and implement this into my Pizzeria service. I decided that if someone actually used my service it wouldn't make sense to just list "all" the pizza restaurants around the world. The purpose of the service is to let people know what pizza restaurants are near them, and help them get the best pizza as quick as possible. That is why I decided to just use a city name as my searching parameter. Plus the title of the challenge is "Best Pizza Around Town." Since I only use the city name I didn't see a need to use the "INDEX" and "SHOW" endpoints from the pizza API. With additional time I would focus primarily on testing as much as possible before creating new features. A feature I would like to add later would be the ability to save cookies locally for the list of pizzeria's. That way if a user clicks on one of the list items and goes to the website, but then hits the back button they don't have to put the city name back in to get their list back.
 
 Resume/Profiles
 ---------------

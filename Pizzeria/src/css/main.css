@@ -1,65 +1,65 @@
 html {
-    /* pizza photo credit to www.athenaspizzaamherst.com */
-    background: url("../../resources/img/Athena_pizza.jpg") no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+  /* pizza photo credit to www.athenaspizzaamherst.com */
+  background: url("../../resources/img/Athena_pizza.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 body {
-    margin: 0px;
+  margin: 0px;
 }
 
 h1 {
-    color: white;
-    font-family: 'Rouge Script', cursive;
-    font-size: 320%;
-    font-weight: normal;
-    text-align: center;
-    text-shadow: 1px 1px 2px #082b32;
-    line-height: 18px;
-    margin-top: 50px;
-    margin-right: 4px;
+  color: white;
+  font-family: 'Rouge Script', cursive;
+  font-size: 320%;
+  font-weight: normal;
+  text-align: center;
+  text-shadow: 1px 1px 2px #082b32;
+  line-height: 18px;
+  margin-top: 50px;
+  margin-right: 4px;
 }
 
 #background-img {
-    min-width: 100%;
-    min-height: 100%;
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    z-index: 0;
-    display: flex;
+  min-width: 100%;
+  min-height: 100%;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 0;
+  display: flex;
 }
 
 .flex-container {
-    height: 100%;
-    padding: 0px;
-    margin: 0px;
-    align-items: center;
-    justify-content: center;
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
+  height: 100%;
+  padding: 0px;
+  margin: 0px;
+  align-items: center;
+  justify-content: center;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
 }
 
 .col {
-    width: auto;
-    margin-top: 80px;
-    margin-bottom: 80px;
+  width: auto;
+  margin-top: 80px;
+  margin-bottom: 80px;
 }
 
 .flex-item {
-    padding: 10px;
-    width: 260px;
-    height: 200px;
-    margin: auto;
-    line-height: 20px;
-    color: white;
-    font-weight: bold;
-    font-size: 2em;
-    text-align: center;
+  padding: 10px;
+  width: 260px;
+  height: 200px;
+  margin: auto;
+  line-height: 20px;
+  color: white;
+  font-weight: bold;
+  font-size: 2em;
+  text-align: center;
 }

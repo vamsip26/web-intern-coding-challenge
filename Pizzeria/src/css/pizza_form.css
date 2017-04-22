@@ -1,57 +1,58 @@
 .pizzeria-form {
-    font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 .form-validation {
-    background-color: white;
-    border-radius: 3px;
+  background-color: white;
+  border-radius: 3px;
+  margin-top: -18px;
 }
 .loading {
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 12px;
-    padding: 3px;
-    color: black;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  padding: 3px;
+  color: black;
 }
 
 /* Pizzeria Input */
 .pizzeria-form input {
-    text-align: center;
+  text-align: center;
 }
 
 .pizzeria-form ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .pizzeria-form li {
-    display: block;
-    padding: 9px;
-    margin-bottom: 20px;
-    border-radius: 3px;
-    background-color: white;
+  display: block;
+  padding: 9px;
+  margin-bottom: 20px;
+  border-radius: 3px;
+  background-color: white;
 }
 
 .pizzeria-form li:last-child {
-    background-color: transparent;
-    padding: 0px;
+  background-color: transparent;
+  padding: 0px;
 }
 
 .pizzeria-form li > span {
-    background: black;
-    display: block;
-    padding: 3px;
-    margin: 0;
-    text-align: center;
-    border-bottom-right-radius: 3px;
-    border-bottom-left-radius: 3px;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 11px;
+  background: black;
+  display: block;
+  padding: 3px;
+  margin: 0;
+  text-align: center;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
 }
 
 .pizzeria-form textarea {
-    resize:none;
+  resize:none;
 }
 
 .pizzeria-form input[type="text"],
@@ -59,102 +60,102 @@
 .pizzeria-form textarea,
 .pizzeria-form select
 {
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    width: 100%;
-    display: block;
-    outline: none;
-    border-top-left-radius: 3px;
-    border-top-right-radius: 3px;
-    border: none;
-    height: 25px;
-    line-height: 25px;
-    font-size: 16px;
-    padding: 0;
-    font-family: Georgia, "Times New Roman", Times, serif;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  width: 100%;
+  display: block;
+  outline: none;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border: none;
+  height: 25px;
+  line-height: 25px;
+  font-size: 16px;
+  padding: 0;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 /* end pizzeria input */
 
 /* Pizzeria Button */
 .pizzeria-form a {
-    -moz-box-shadow: 0px 3px 8px -1px #8a2a21;
-    -webkit-box-shadow: 0px 3px 8px -1px #8a2a21;
-    box-shadow: 0px 3px 8px -1px #8a2a21;
-    background-color: #c62d1f;
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
-    border-radius: 3px;
-    border: 1px solid #d02718;
-    display: block;
-    cursor: pointer;
-    color: white;
-    font-family: Georgia;
-    font-size: 20px;
-    padding: 16px;
-    text-decoration: none;
-    text-shadow: 0px 2px 0px #810e05;
+  -moz-box-shadow: 0px 3px 8px -1px #8a2a21;
+  -webkit-box-shadow: 0px 3px 8px -1px #8a2a21;
+  box-shadow: 0px 3px 8px -1px #8a2a21;
+  background-color: #c62d1f;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  border: 1px solid #d02718;
+  display: block;
+  cursor: pointer;
+  color: white;
+  font-family: Georgia;
+  font-size: 20px;
+  padding: 16px;
+  text-decoration: none;
+  text-shadow: 0px 2px 0px #810e05;
 }
 
 .pizzeria-form a:hover {
-    background-color: #f24437;
+  background-color: #f24437;
 }
 
 .pizzeria-form a:active {
-    position: relative;
-    top: 1px;
+  position: relative;
+  top: 1px;
 }
 /* end pizzeria button */
 
 /* Pizzeria List */
 #pizzeria-list {
-    list-style: none;
-    padding: 0px;
-    margin-bottom: 40px;
-    display: block;
-    font-size: 14px;
-    font-family: Georgia, "Times New Roman", Times, serif;
-    color: black;
-    border-width: 1px;
-    border-color: gray;
-    border-radius: 3px;
-    background-color: white;
+  list-style: none;
+  padding: 0px;
+  margin-bottom: 40px;
+  display: block;
+  font-size: 14px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: black;
+  border-width: 1px;
+  border-color: gray;
+  border-radius: 3px;
+  background-color: white;
 }
 
 #pizzeria-list p {
-    text-align: left;
+  text-align: left;
 }
 
 #pizzeria-list li:last-child {
-    padding: 10px;
-    display: block;
-    overflow: auto;
-    list-style-position: inside;
-    border: 1px solid #eee;
-    border-bottom-right-radius: 3px;
-    border-bottom-left-radius: 3px;
+  padding: 10px;
+  display: block;
+  overflow: auto;
+  list-style-position: inside;
+  border: 1px solid #eee;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
 }
 
 #pizzeria-list li:first-child {
-    padding: 10px;
-    display: block;
-    overflow: auto;
-    list-style-position: inside;
-    border: 1px solid #eee;
-    border-top-right-radius: 3px;
-    border-top-left-radius: 3px;
+  padding: 10px;
+  display: block;
+  overflow: auto;
+  list-style-position: inside;
+  border: 1px solid #eee;
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
 }
 
 #pizzeria-list li {
-    padding: 10px;
-    display: block;
-    overflow: auto;
-    list-style-position: inside;
-    border: 1px solid #eee;
+  padding: 10px;
+  display: block;
+  overflow: auto;
+  list-style-position: inside;
+  border: 1px solid #eee;
 }
 
 #pizzeria-list li:hover {
-    background: #eee;
-    cursor: pointer;
+  background: #eee;
+  cursor: pointer;
 }
 /* end pizzeria list */
