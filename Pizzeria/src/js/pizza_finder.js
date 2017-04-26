@@ -77,7 +77,7 @@ $(document).ready(function() {
 		} else {
 			/* (Second) */
 			$('#list').html("<h3 class='loading'>Loading pizzeria's");
-			$.getJSON("http://shipt-pizza-api.herokuapp.com/api/v1/properties/search?city=" + location, function(json) {
+			$.getJSON("https://shipt-pizza-api.herokuapp.com/api/v1/properties/search?city=" + location, function(json) {
 				/* (Third) */
 				if (json.length == 0) {
 					$('#list').html("<h3 class='loading'>Nothing found for " + location + "</h3>");
