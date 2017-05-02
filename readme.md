@@ -6,7 +6,9 @@ Completed by Brendan Baalke
 Configuration / Installation
 ----------------------------
 * The Pizzeria site is hosted on github pages and can be accessed via the link below:
-  - [Pizzeria](http://quazemo.github.io/web-intern-coding-challenge/Pizzeria/src/templates/)
+  [Pizzeria](http://quazemo.github.io/web-intern-coding-challenge/Pizzeria/src/templates/)
+
+* Run locally by downloading this repository onto your local machine. I have tested this project primarily with the Chrome web browser so if you test with another browser there may be bugs. To get the project up and running locally just point Chrome to the index.html file within Pizzeria -> src -> templates -> index.html. To do this first unzip the repository files, then navigate to the index.html file and right click and choose "open with -> Chrome." Or you can use MAMP for a local server environment. Instructions for using MAMP are at the bottom of this readme.
 
 
 Libraries / Dependencies
@@ -28,12 +30,12 @@ Problem
 	- Create a user friendly web service for finding the latest and top rated pizza restaurants around the world!
 	Design UX/UI that is simple enough to handle/understand for users of all ages.
 
-  - **Requirements:**
+- **Requirements:**
 	- Allow users to find pizzeria's by city name.
 	- List pizzeria's elegantly.
 	- Allow users to click on listed pizzeria and gain additional information from restaurants website.
 
-  - **Questions to think about:**
+- **Questions to think about:**
 	- What are some use cases?
 	- What are some scenarios?
 	- When might a user want pizza?
@@ -55,27 +57,26 @@ Solution
 	- I decided to use jQuery for the similar CSS syntax, and API data simplicity. Since jQuery also makes working with JSON data so easy this improved my productivity. JQuery will make this site easier to change if needed in the future. jQuery is also typically easier to understand for new web developers. I used Flexbox for flow and arranging my design. Flexbox offers greater design control with less code and I find it very intuitive. I use the jQuerySession plugin so that I only store data for a single web session, and I make sure to clear the data with every search result. Since I only use the city name I didn't see a need to use the "INDEX" and "SHOW" endpoints from the pizza API.
 
   - **Testing / Validation:**
-    	```javascript
-		$.session.clear();
-		$('#pizza-list').empty();
-		var location = $('#city').val().toString();
-		if (!location.trim()) {
-			$('#list').html("<h3 class='loading'>Please enter a city name</h3>");
-		} else {
-			$('#list').html("<h3 class='loading'>Loading pizzeria's");
-			$.getJSON("http://shipt-pizza-api.herokuapp.com/api/v1/properties/search?city=" + location, function(json) {
-				if (json.length == 0) {
-					$('#list').html("<h3 class='loading'>Nothing found for " + location + "</h3>");
-    	```
 	- I perform form validation as well as some API validation within my jQuery code. Checked that all file permissions are safe. Created a simple Content Security Policy header to avoid code injection from untrusted sources. Outside of programming I have tested Pizzeria on Chrome, Mozilla Firefox, Safari/Safari mobile, and Internet Explorer.
-
+  ```javascript
+	$.session.clear();
+	$('#pizza-list').empty();
+	var location = $('#city').val().toString();
+	if (!location.trim()) {
+		$('#list').html("<h3 class='loading'>Please enter a city name</h3>");
+	} else {
+		$('#list').html("<h3 class='loading'>Loading pizzeria's");
+		$.getJSON("http://shipt-pizza-api.herokuapp.com/api/v1/properties/search?city=" + location, function(json) {
+			if (json.length == 0) {
+				$('#list').html("<h3 class='loading'>Nothing found for " + location + "</h3>");
+  ```
 
 With Additional Time
 --------------------
-* I would focus primarily on testing as much as possible before creating new features. A feature I would like to add later though would be the ability to save cookies locally for the list of pizzeria's. That way if a user previous list is repopulated when they return to the website. I would perform tests for other scenarios such as 'what happens when a user switches from wifi to their mobile service provider'? Does the service freeze, crash, glitch out? I'd like to spend time working on some automated tests to ping the Pizza API Server to make sure it is online before trying to get data from it. I'd check for more possibilities of code injection (XSS attacks...etc). I would look into the possibility of adding a feature to allow users to directly order pizza or begin navigation from the site. I'd also look at changing some of the jQuery to JavaScript for better performance, since jQuery adds a bit more overhead from tasks like ```$('#city').val()``` I would look for a higher resolution background image with similar appeal, and look into having a script determine which device is currently viewing the site. That way I can adjust the screen ratio and resolutions to allow for a better user experience. Gathering "hands-on" user feedback and surveying the public is a great way to continue rapidly prototyping this site incrementally.
+* I would focus primarily on testing as much as possible before creating new features. A feature I would like to add later though would be the ability to save cookies locally for the list of pizzeria's. That way a users previous list is repopulated when they return to the website. I would perform tests for other scenarios such as 'what happens when a user switches from wifi to their mobile service provider'? Does the service freeze, crash, glitch out? I'd like to spend time working on some automated tests to ping the Pizza API Server to make sure it is online before trying to get data from it. I'd check for more possibilities of code injection (XSS attacks...etc). I would look into the possibility of adding a feature to allow users to directly order pizza or begin navigation from the site. I'd also look at changing some of the jQuery to JavaScript for better performance, since jQuery adds a bit more overhead from tasks like ```$('#city').val()``` I would look for a higher resolution background image with similar appeal, and look into having a script determine which device is currently viewing the site. That way I can adjust the screen ratio and resolutions to allow for a better user experience. Gathering "hands-on" user feedback and surveying the public is a great way to continue rapidly prototyping this site incrementally.
 
 
-Resume/Profiles/Projects
+Resume / Profiles / Projects
 ------------------------
 * LinkedIn -> [LinkedIn](https://www.linkedin.com/in/brendan-baalke-192444114)
 * My online portfolio -> [brendanbaalke.com](www.brendanbaalke.com)
