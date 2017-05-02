@@ -5,13 +5,13 @@ Completed by Brendan Baalke
 
 Configuration / Installation
 ----------------------------
-* The Pizzeria site is hosted on github pages and can be accessed via the link below:
+* The Pizzeria site is hosted on github pages and can be accessed via the link below: <br />
   [Pizzeria](http://quazemo.github.io/web-intern-coding-challenge/Pizzeria/src/templates/)
 
 * Run locally by downloading this repository onto your local machine. I have tested this project primarily with the Chrome web browser so if you test with another browser there may be bugs. To get the project up and running locally just point Chrome to the index.html file within Pizzeria -> src -> templates -> index.html. To do this first unzip the repository files, then navigate to the index.html file and right click and choose "open with -> Chrome." Or you can use MAMP for a local server environment. Instructions for using MAMP are at the bottom of this readme.
 
 
-Libraries / Dependencies
+Libraries / Dependencies / API
 ----------------------------
 * jQuerySession Plugin
 	- I use this public jQuery session plugin so I can make use of session storage for each item in my pizza list.<br />
@@ -22,6 +22,8 @@ Libraries / Dependencies
   [jQuery Code](https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js)<br />
   [Download jQuery](https://jquery.com/download/)
 
+* Pizza API
+  - The Pizza API usage instructions can be found in the pizza_api.md file: <br /> [pizza_api](https://github.com/quazemo/web-intern-coding-challenge/blob/master/pizza_api.md)
 
 Problem
 -------
