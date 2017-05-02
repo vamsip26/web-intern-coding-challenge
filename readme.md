@@ -69,8 +69,8 @@ Solution
 		$.getJSON("http://shipt-pizza-api.herokuapp.com/api/v1/properties/search?city=" + location, function(json) {
 			if (json.length == 0) {
 				$('#list').html("<h3 class='loading'>Nothing found for " + location + "</h3>");
-  ```
-<br />
+  ```<br />
+
 With Additional Time
 --------------------
 * I would focus primarily on testing as much as possible before creating new features. A feature I would like to add later though would be the ability to save cookies locally for the list of pizzeria's. That way a users previous list is repopulated when they return to the website. I would perform tests for other scenarios such as 'what happens when a user switches from wifi to their mobile service provider'? Does the service freeze, crash, glitch out? I'd like to spend time working on some automated tests to ping the Pizza API Server to make sure it is online before trying to get data from it. I'd check for more possibilities of code injection (XSS attacks...etc). I would look into the possibility of adding a feature to allow users to directly order pizza or begin navigation from the site. I'd also look at changing some of the jQuery to JavaScript for better performance, since jQuery adds a bit more overhead from tasks like ```$('#city').val()``` I would look for a higher resolution background image with similar appeal, and look into having a script determine which device is currently viewing the site. That way I can adjust the screen ratio and resolutions to allow for a better user experience. Gathering "hands-on" user feedback and surveying the public is a great way to continue rapidly prototyping this site incrementally.
