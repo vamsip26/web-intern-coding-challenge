@@ -1,4 +1,6 @@
-/* jQuerySession public plugin */
+/* jQuerySession public plugin
+ * https://github.com/AlexChittock/JQuery-Session-Plugin
+ */
 
 (function($){
 
