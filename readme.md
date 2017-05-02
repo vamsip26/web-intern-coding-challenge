@@ -69,7 +69,8 @@ Solution
 		$.getJSON("http://shipt-pizza-api.herokuapp.com/api/v1/properties/search?city=" + location, function(json) {
 			if (json.length == 0) {
 				$('#list').html("<h3 class='loading'>Nothing found for " + location + "</h3>");
-  ```<br />
+  ```
+
 
 With Additional Time
 --------------------
